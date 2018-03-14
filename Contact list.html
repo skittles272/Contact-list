@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="En">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initail-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css">
+        
+        <title>Team 10</title>
+
+    </head>
+
+<body>
+    <div class="container">
+    
+        <h1 class="center-align">
+            Team 10
+        </h1>
+        
+        <input type="text" id="filterInput" placeholder="Search names...">
+        
+        <ul id="names" class="collection-header">
+            <li>
+                
+            </li>
+            <li class="collection-header">
+                <h5>A</h5>
+            </li>
+            
+             <li class="collection-item">
+            <a href="#">AJ Mitchell</a>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Alex Lange</a>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Alissa Violet</a>
+            </li>
+            
+             <li class="collection-item">
+            <a href="#">Anthony Trujillo</a>
+            </li>
+            
+            <li class="collection-header">
+                <h5>B</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>C</h5>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Chance Sutton</a>
+            </li>
+            
+            <li class="collection-header">
+                <h5>D</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>E</h5>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Emilio Martinez</a>
+            </li>
+        
+            <li class="collection-header">
+                <h5>F</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>G</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>H</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>I</h5>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Ivan Martinez</a>
+            </li>
+            
+            <li class="collection-header">
+                <h5>J</h5>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Jake Paul</a>
+            </li>
+            
+            <li class="collection-header">
+                <h5>K</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>L</h5>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Lucas Dobre</a>
+            </li>
+            
+            <li class="collection-header">
+                <h5>M</h5>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Marcus Dobre</a>
+            </li>
+            
+            <li class="collection-header">
+                <h5>N</h5>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Nick Crompton</a>
+            </li>
+            
+            <li class="collection-header">
+                <h5>O</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>P</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>Q</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>R</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>S</h5>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Stan Gerards</a>
+            </li>
+            
+            <li class="collection-header">
+                <h5>T</h5>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Tessa Brooks</a>
+            </li>
+            
+            <li class="collection-item">
+            <a href="#">Tristan Tales</a>
+            </li>
+            
+            <li class="collection-header">
+                <h5>U</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>V</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>W</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>X</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>Y</h5>
+            </li>
+            
+            <li class="collection-header">
+                <h5>Z</h5>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <script>
+// Get input element
+        let filterInput = document.getElementById('filterInput');
+// Add event listener
+        filterInput.addEventListener('keyup', filterNames);
+        
+        function filterNames(){
+// Get value of input
+            let filterValue = document.getElementById('filterInput').value.toUpperCase();
+            
+// Get names u1        
+            let u1 = document.getElementById('names');
+// Get lis from u1
+            let li = u1.querySelectorAll('li.collection-item');
+            
+// Loop through collection-item lis
+            for(let i = 0;i < li.length;i++){
+                let a = li[i].getElementsByTagName('a')[0];
+// If matched
+                if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                    li[i].style.display = '';
+                } else {
+                    li[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
